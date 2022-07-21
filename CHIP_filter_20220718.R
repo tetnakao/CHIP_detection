@@ -212,7 +212,7 @@ varsOI.func[(varsOI.func$ExonicFunc.refGene=="frameshift deletion"|
 ############
 #write out file
 
-write.csv(varsOI.func[whitelist==T,],paste0(sample_id,".allCHIPSITES-set5.varsOI.func.set3.wl.csv"))
-write.csv(varsOI.func[manualreview==T,],paste0(sample_id,".allCHIPSITES-set5.varsOI.func.set3.manualreview.csv"))
-write.csv(varsOI.func[Accession=="NM_022552"&ExonicFunc.refGene=="nonsynonymous SNV"&!whitelist,],
-          paste0(sample_id,".allCHIPSITES-set5.varsOI.func.set3.DNMT3Amis.notwl.csv"))
+fwrite(as.data.table(varsOI.func[whitelist==T,]),paste0(sample_id,".allCHIPSITES-set5.varsOI.func.set3.wl.tsv"), sep = "\t")
+fwrite(as.data.table(varsOI.func[manualreview==T,]),paste0(sample_id,".allCHIPSITES-set5.varsOI.func.set3.manualreview.tsv"), sep = "\t")
+fwrite(as.data.table(varsOI.func[Accession=="NM_022552"&ExonicFunc.refGene=="nonsynonymous SNV"&!whitelist,]),
+          paste0(sample_id,".allCHIPSITES-set5.varsOI.func.set3.DNMT3Amis.notwl.tsv"), sep = "\t")
