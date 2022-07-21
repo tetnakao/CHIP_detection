@@ -1,8 +1,8 @@
 library(data.table, quietly=T)
-gList<-fread("/Updated.CHIP_Rules.csv")
-whitelist.mis<-fread("/updated.CHIP_missense_vars.tsv")
-whitelist.splice<-fread("/updated.CHIP_splice_vars.csv")
-whitelist.LoF<-fread("/updated.CHIP_nonsense_FS_vars.csv")
+gList<-fread("CHIP_rules/Updated.CHIP_Rules.csv")
+whitelist.mis<-fread("CHIP_rules/updated.CHIP_missense_vars.tsv")
+whitelist.splice<-fread("CHIP_rules/updated.CHIP_splice_vars.csv")
+whitelist.LoF<-fread("CHIP_rules/updated.CHIP_nonsense_FS_vars.csv")
 
 args <- commandArgs(trailingOnly=TRUE)
 sample_id<-args[1]
