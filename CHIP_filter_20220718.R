@@ -1,5 +1,4 @@
 library(data.table, quietly=T)
-gList<-fread("NEJM_2017_genes_01262020.txt")
 gList<-fread("/Updated.CHIP_Rules.csv")
 whitelist.mis<-fread("/updated.CHIP_missense_vars.tsv")
 whitelist.splice<-fread("/updated.CHIP_splice_vars.csv")
